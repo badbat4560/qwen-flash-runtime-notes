@@ -1,0 +1,10 @@
+{
+  "max_model_len": 131072,
+  "kv_cache_dtype": "bfloat16",
+  "gpu_memory_utilization": 0.92,
+  "max_num_seqs": 16,
+  "ple_cpu_offload": true,
+  "mtp_speculative_tokens": 1,
+  "prefix_caching": true,
+  "note": "Historical baseline parameters, not a complete launch configuration or a B12x performance result."
+}

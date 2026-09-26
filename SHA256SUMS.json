@@ -1,0 +1,13 @@
+{
+  ".gitignore": "6526536207e7fb10066cd9e19b24d7273d6b735ef4757d4881315f153f4d79b7",
+  "docs/article.md": "2972d2601e032dd99ec89ba36ec770ac702b366fad9f5a3d6154559648215549",
+  "docs/integration.md": "79f41285d335ab60600e7805219c49caddd207732532a4e722ed2423d3ba3e6b",
+  "docs/results.md": "ee0dfc5921f47e104ebffaa48f32fd9c014e4bf54dd525511e6dc30f248b907e",
+  "docs/validation.md": "52b5af5a2bfacb9eccf4799b117bbf44514098ab711e29294b7cfe5246109ef5",
+  "examples/baseline.json": "7d0e9ac67aeac874b0c21b212f9ade86c5c957e51987141c679c4274126fa8d6",
+  "patches/b12x_compat.py": "c2ede8990a8bd6383795a8d90ccb8d8c1f6d31b904809aeb86ae2f580cfbc844",
+  "patches/ple-unsplit.patch": "3e92c57dd19fb4deaa656d2ea751dc43f09c5bd58f2428a5129be37ad1ec9547",
+  "README.md": "43fce8abf1e2ec652b6623107f6bdbb9e4d8bd91aaa02d5e31981813e7468945",
+  "requirements-test.txt": "0f3a68945965a5ca0ff7758b96bb4a45b16ceb730c656c630fab43024dcdb86c",
+  "tests/test_b12x_compat.py": "b5ff557e46bb3ac952351f78bd9985402e494e3990bb4650bd8a9cae91748313"
+}

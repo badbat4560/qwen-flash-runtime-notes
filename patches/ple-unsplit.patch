@@ -1,0 +1,46 @@
+--- a/ple_layer.py
++++ b/ple_layer.py
+@@ -488,8 +488,41 @@
+                 buffer.copy_(loaded_weight.to(device=buffer.device, dtype=buffer.dtype))
+                 loaded.add(name)
+                 continue
+-            if name.startswith(shard_prefix) and name.endswith(".weight"):
+-                shard_text = name[len(shard_prefix) : -len(".weight")]
++            short_shard_prefix = "shard_"
++            if name.endswith(".weight") and (
++                name.startswith(shard_prefix)
++                or name.startswith(short_shard_prefix)
++            ):
++                active_prefix = (
++                    shard_prefix
++                    if name.startswith(shard_prefix)
++                    else short_shard_prefix
++                )
++                shard_text = name[len(active_prefix) : -len(".weight")]
++                # Some converted checkpoints store the complete PLE table as
++                # ``shard_.weight`` (an empty shard suffix) rather than as
++                # numbered pieces. Route that tensor through the ordinary
++                # embedding loader; it validates and copies the full shape.
++                if shard_text == "":
++                    embedding = self.ngram_embedding
++                    expected_shape = (
++                        embedding.org_vocab_size,
++                        embedding.embedding_dim,
++                    )
++                    if tuple(loaded_weight.shape) != expected_shape:
++                        raise ValueError(
++                            "Shape mismatch for unsplit PLE embedding: expected "
++                            f"{expected_shape}, got {tuple(loaded_weight.shape)}"
++                        )
++                    copy_ple_embedding_shard_(
++                        embedding.weight.data,
++                        loaded_weight,
++                        checkpoint_start=0,
++                        tp_start=embedding.shard_indices.org_vocab_start_index,
++                        tp_end=embedding.shard_indices.org_vocab_end_index,
++                    )
++                    loaded.add("ngram_embedding.weight")
++                    continue
+                 if not shard_text.isdigit():
+                     regular_weights.append((name, loaded_weight))
+                     continue
