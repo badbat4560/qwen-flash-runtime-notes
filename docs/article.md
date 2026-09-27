@@ -1,6 +1,6 @@
 # Running Qwen Flash-Next NVFP4 in vLLM: PLE Loading, B12x Fixes, and Stable Inference
 
-Companion code: [PLE and B12x compatibility patches, tests, and deployment notes](https://github.com/hf4560/qwen-flash-runtime-notes). The repository contains extracted fixes and validation notes, not a complete runtime image.
+Companion code: [PLE and B12x compatibility patches, tests, and deployment notes](https://github.com/badbat4560/qwen-flash-runtime-notes). The repository contains extracted fixes and validation notes, not a complete runtime image.
 
 The model loaded. The health endpoint returned a successful response. A few requests completed. Then concurrent traffic arrived, and the inference process ran out of GPU memory.
 
