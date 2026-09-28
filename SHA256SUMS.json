@@ -7,7 +7,9 @@
   "examples/baseline.json": "d80c2c484d9a78595e9eb360a4d5b3f02558d6bf73ac2a59cb290123ab4fcec2",
   "patches/b12x_compat.py": "2408d3f03db4ffb7218e854ffeb39bbbc9641ba6f5703cc0606bcf16e81cbd3a",
   "patches/ple-unsplit.patch": "a5636342d339bc76cfa481794d0e243ae070ec6c6f89bdfc5e70781371cc8f5e",
-  "README.md": "af139091abfb44659617af5f7100b02932f0bf17ab2e70c8481fd71b923f4cf2",
+  "README.md": "562183a2009b205d5b102a9a71bd75e7bd34b502b8a35cb3a09386054946de7f",
   "requirements-test.txt": "a041fc1462be7baf8397cbaa4ba14800a06b4961223d684638fcc512dd9931f9",
-  "tests/test_b12x_compat.py": "d91b8530717d82265f55a10e26da6b83feb2246c53deed9dbf369fab6ce4c19d"
+  "tests/test_b12x_compat.py": "d91b8530717d82265f55a10e26da6b83feb2246c53deed9dbf369fab6ce4c19d",
+  "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+  "NOTICE": "d2ccc18c803d833e307f33638508a83f23da9aae95e44a1f60472488d4b6a339"
 }

@@ -32,3 +32,9 @@ These tests need PyTorch but do not need CUDA, model weights, or a FlashInfer in
 Big respect to **windowsxp811203** for the quality of the work and detailed reports.
 
 The runtime discussed here builds on vLLM, FlashInfer, and PyTorch. Upstream code and model artifacts retain their respective licenses. The PLE change is distributed as a small diff rather than a full copy of the upstream module. No blanket license or ownership claim over upstream components is made by this collection.
+
+## License
+
+The original code, patches, tests, configuration examples, and documentation in this repository are open source under the [Apache License 2.0](LICENSE). Commercial use, modification, and redistribution are permitted under its terms.
+
+Existing upstream copyright and license notices must be retained. External dependencies and model weights retain their own licenses; this repository does not relicense them. See [NOTICE](NOTICE) for attribution.
